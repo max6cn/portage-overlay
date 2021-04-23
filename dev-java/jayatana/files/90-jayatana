@@ -1,0 +1,8 @@
+if [ -n "$JAVA_TOOL_OPTIONS" ]; then
+    JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:+$JAVA_TOOL_OPTIONS }-javaagent:JAVA_AGENT"
+else
+    JAVA_TOOL_OPTIONS=" -javaagent:JAVA_AGENT"
+fi
+export JAVA_FONTS=/usr/share/fonts/TTF
+export _JAVA_OPTIONS=-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dsun.java2d.xrender=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel
+export JAVA_TOOL_OPTIONS

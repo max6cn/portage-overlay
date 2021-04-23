@@ -1,0 +1,53 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	(date 1616738392157)
++++ b/CMakeLists.txt	(date 1616738392157)
+@@ -71,7 +71,6 @@
+ add_subdirectory(applications)
+ add_subdirectory(views)
+ add_subdirectory(accounts)
+-add_subdirectory(tests)
+ if (${ENABLE_EXTENSIONS})
+     add_subdirectory(extensions)
+ endif()
+
+diff --git a/framework/CMakeLists.txt b/framework/CMakeLists.txt
+--- a/framework/CMakeLists.txt	(date 1616718048243)
++++ b/framework/CMakeLists.txt	(date 1616718048243)
+@@ -4,4 +4,3 @@
+ install(FILES qmldir DESTINATION ${FRAMEWORK_INSTALL_DIR})
+ 
+ add_subdirectory(src)
+-add_subdirectory(qml/tests)
+
+diff --git a/framework/src/CMakeLists.txt b/framework/src/CMakeLists.txt
+--- a/framework/src/CMakeLists.txt	(date 1616738549659)
++++ b/framework/src/CMakeLists.txt	(date 1616738549659)
+@@ -97,9 +97,7 @@
+ 
+ set(BUILD_TESTING ON)
+ 
+-add_subdirectory(tests)
+ add_subdirectory(domain/mime)
+-add_subdirectory(domain/mime/tests)
+-add_subdirectory(domain/settings/tests)
++
+ 
+ feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+ 
+ feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+diff --git a/components/CMakeLists.txt b/components/CMakeLists.txt
+--- a/components/CMakeLists.txt	(date 1616738741009)
++++ b/components/CMakeLists.txt	(date 1616738741009)
+@@ -8,7 +8,6 @@
+ endmacro(install_qml_component)
+ 
+ install_qml_component(kube)
+-add_subdirectory(kube/tests)
+ install_qml_component(accounts)
+ 
+ 
+
+ 
+ 
