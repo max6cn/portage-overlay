@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Wechat
+Comment=Wechat(UOS)
+GenericName=Wechat
+Exec=/usr/bin/wechat-uos %U
+Icon=wechat
+Type=Application
+StartupNotify=true
+Categories=Application;chat;
+StartupWMClass=Wechat
