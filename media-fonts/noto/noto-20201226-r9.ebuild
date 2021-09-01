@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 arm arm64 ~mips ppc ppc64 sparc x86"
 # Extra allows to optionally reduce disk usage even returning to tofu
 # issue as described in https://www.google.com/get/noto/
-IUSE="cjk +extra"
+IUSE="cjk extra"
 
 SCRIPTS="
     Adlam Ahom AnatolianHieroglyphs Arabic Armenian Avestan Balinese Bamum
@@ -53,17 +53,15 @@ FONT_CONF=(
 )
 
 src_install() {
-	# mkdir install-unhinted install-hinted || die
-	# cp -a unhinted/*/* install-unhinted/. ||  die
-	# cp -a hinted/*/* install-hinted/. || die
+	mkdir install-unhinted install-hinted || die
+	mv unhinted/ttf/Noto*/*.tt[fc] install-unhinted/. ||  die
+	mv hinted/ttf/Noto*/*.tt[fc] install-hinted/. || die
 
 	FONT_S="${S}/install-unhinted/" font_src_install
 	FONT_S="${S}/install-hinted/" font_src_install
 	FONT_DIR="${D}/usr/share/fonts/noto"
 	
-	# Allow to drop some fonts optionally for people that want to save
-	# disk space. Following ArchLinux options.
-	for script in ${SCRIPTS}; do
+		for script in ${SCRIPTS}; do
 		if ! use "${script}"; then
 		rm -f "${FONT_DIR}"/NotoSans${script}{,UI,Slanted,Unjoined}-*.ttf
 		rm -f "${FONT_DIR}"/NotoSerif${script}{,UI,Slanted,Unjoined}-*.ttf
@@ -75,5 +73,7 @@ src_install() {
 	    fi
 	done
 
+	# Allow to drop some fonts optionally for people that want to save
+	# disk space. Following ArchLinux options.
 	use extra || rm -rf "${ED}"/usr/share/fonts/noto/Noto*{Condensed,SemiBold,Extra}*.ttf
 }

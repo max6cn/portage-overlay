@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=41.6.0.19119
+Name=Webex
+Comment=Webex
+Exec=/usr/bin/env QT_AUTO_SCREEN_SCALE_FACTOR=1 QT_SCALE_FACTOR=0.5 /opt/Webex/bin/CiscoCollabHost %U
+Icon=/opt/Webex/bin/sparklogosmall.png
+Terminal=false
+Type=Application
+Categories=Utility;Application;
+MimeType=x-scheme-handler/webexteams
