@@ -1,0 +1,22 @@
+Remove License files from install
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Index: rocm_smi_lib-rocm-5.4.2/CMakeLists.txt
+===================================================================
+--- rocm_smi_lib-rocm-5.4.2.orig/CMakeLists.txt
++++ rocm_smi_lib-rocm-5.4.2/CMakeLists.txt
+@@ -267,9 +267,9 @@
+         DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/${ROCM_SMI}-asan RENAME LICENSE.txt
+         COMPONENT asan)
+ endif()
+-install( FILES ${CPACK_RESOURCE_FILE_LICENSE}
+-        DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/${ROCM_SMI} RENAME LICENSE.txt
+-        COMPONENT dev)
++#install( FILES ${CPACK_RESOURCE_FILE_LICENSE}
++#        DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/${ROCM_SMI} RENAME LICENSE.txt
++#        COMPONENT dev)
+ 
+ ###########################
+ # Packaging directives

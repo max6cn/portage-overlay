@@ -40,3 +40,30 @@
 |  sys-libs/ncurses-compat  |  "console display library (ABI version 5)" | 
 |  x11-libs/libXp  |  "X.Org Xp library" | 
 |  x11-proto/printproto  |  "X.Org Print protocol headers" | 
+
+# ROCM
+sci-libs/hipCUB: 5.7.1-r1 none none
+dev-libs/rccl: 5.1.3 none none 
+sci-libs/rocThrust: 5.7.1-r1 none none 
+sci-libs/hipBLAS: 5.1.3 none none 
+sci-libs/rocRAND: 5.7.1-r1 none none 
+sci-libs/rocSOLVER: 5.1.3-r1 none none 
+sci-libs/rocPRIM: 5.7.1-r1 none none 
+sci-libs/rocBLAS: 5.1.3-r4 none none 
+dev-util/Tensile: 5.1.3-r3 none none 
+dev-util/rocm-cmake: 5.7.1 none none 
+dev-python/msgpack: 1.0.7 none none 
+dev-util/rocm-smi: 5.1.3-r1 none none 
+dev-cpp/msgpack-cxx: 6.1.0 none none 
+dev-util/hip: 5.5.1-r1 none none 
+dev-libs/rocm-comgr: 5.5.1 none none 
+dev-util/rocminfo: 5.5.1 none none 
+dev-perl/URI-Encode: 1.1.1-r1 none none 
+dev-libs/rocr-runtime: 5.5.1 none none 
+dev-libs/rocm-device-libs: 5.5.1 none none 
+dev-libs/roct-thunk-interface: 5.7.1 none none 
+sys-devel/clang-toolchain-symlinks: 15-r2 none 16-r2 
+sys-devel/clang: 15.0.7-r3 none 16.0.6 
+sys-devel/clang-runtime: 15.0.7 none 16.0.6 
+sys-libs/compiler-rt: 15.0.7 none 16.0.6 
+sys-libs/compiler-rt-sanitizers: 15.0.7 none 16.0.6 
